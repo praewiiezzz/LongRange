@@ -17,8 +17,9 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.activity_main);
         Button bntSecond = (Button) findViewById(R.id.buttonSecond);
         bntSecond.setOnClickListener(this);
-        Button bntThird = (Button) findViewById(R.id.buttonThird);
-        bntThird.setOnClickListener(this);
+       /* Button bntThird = (Button) findViewById(R.id.buttonThird);
+        bntThird.setOnClickListener(this);*/
+
     }
     public void onClick(View v) {
         Intent i;
@@ -27,10 +28,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
                 i = new Intent(getApplicationContext(), Sec.class);
                 startActivity(i);
                 break;
-            case R.id.buttonThird:
+/*            case R.id.buttonThird:
                 i = new Intent(getApplicationContext(), Third.class);
                 startActivity(i);
-                break;
+                break;*/
             }
 
     }
