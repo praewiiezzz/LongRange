@@ -80,10 +80,10 @@ public class Sec extends MainActivity implements GoogleApiClient.ConnectionCallb
                         catch(Exception e){
                             e.printStackTrace();
                         }
-
+                        // Call Next page
                         try{
                             if(distance!=0) {
-                                startActivity(new Intent(Sec.this, Third.class));
+                                startActivity(new Intent(Sec.this, Barometer.class));
                             }
                         }
                         catch(Exception e){
@@ -154,7 +154,7 @@ public class Sec extends MainActivity implements GoogleApiClient.ConnectionCallb
         mGoogleApiClient.disconnect();
     }
 
-    private double meterDistanceBetweenPoints(double lat_a, double lng_a, double lat_b, double lng_b) {
+    public double meterDistanceBetweenPoints(double lat_a, double lng_a, double lat_b, double lng_b) {
         double pk = (double) (180.0/Math.PI);
 
         double a1 = Math.toRadians(lat_a);
@@ -168,5 +168,7 @@ public class Sec extends MainActivity implements GoogleApiClient.ConnectionCallb
         double c = 2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
         return 6371e3*c/1000;  // km
     }
+
+
 
 }
